@@ -10,27 +10,42 @@ import {
   MenuList,
   Button,
   Input,
-  background,
+  MenuItem,
+  useColorModeValue,
 } from "@chakra-ui/react";
 import {
   ChevronDownIcon,
   ChevronRightIcon,
   SearchIcon,
 } from "@chakra-ui/icons";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faHeart,faUser } from "@fortawesome/free-regular-svg-icons"; 
-import { faCartShopping } from "@fortawesome/free-solid-svg-icons"; 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faHeart, faUser } from "@fortawesome/free-regular-svg-icons";
+import { faCartShopping, faBorderAll } from "@fortawesome/free-solid-svg-icons";
 //local imports
+import "../App.css";
 
 export default function Navbar() {
+  const bg = useColorModeValue("white", "gray.800");
+  const hoverBg = useColorModeValue("blue.100", "blue.110");
   return (
-    <div >
+    <div id="Navbar">
       {/* Navbar top */}
-      <Flex justifyContent={'center'}  alignItems={'center'} bg={"#0071DC"} gap={6} p={"15px"}>
+      <Flex
+        justifyContent={"center"}
+        alignItems={"center"}
+        bg={"#0071DC"}
+        gap={6}
+        p={"15px"}
+      >
         {/* Navbar */}
-        <Box  id="LogoImage" width={"fit-content"}>
+        <Box id="LogoImage" width={"fit-content"}>
           <a href="">
-            <Image w={"40px"} h={"40px"} src="https://bit.ly/dan-abramov" borderRadius={'50px'} />
+            <Image
+              w={"40px"}
+              h={"40px"}
+              src="https://bit.ly/dan-abramov"
+              borderRadius={"50px"}
+            />
           </a>
         </Box>
         {/* select the order */}
@@ -231,13 +246,7 @@ export default function Navbar() {
           </MenuList>
         </Menu>
         {/* serach bar */}
-        <Flex
-          borderRadius={50}
-          w={"35%"}
-          gap={3}
-          p={2}
-          bg={"#FFFFFF"}
-        >
+        <Flex borderRadius={50} w={"35%"} gap={3} p={2} bg={"#FFFFFF"}>
           <Input
             border={"none"}
             _focus={{
@@ -262,30 +271,394 @@ export default function Navbar() {
           </Box>
         </Flex>
         {/* Re-orders */}
-        <Flex w={"fit-content"} borderRadius={50} p={'2px 18px'} bg={'#0071DC'} _hover={{cursor:'pointer',bg:'#002D58'}}>
-        <FontAwesomeIcon icon={faHeart} style={{marginTop:'15px',marginRight:'10px', color:'white'}} />
-        <Box>
-          <Text fontSize={'16px'} color={'#FFFFFF'} fontWeight={350}>Reorder</Text>
-          <Text fontWeight={600} color={'#FFFFFF'} fontSize={'16px'}>My Items</Text>
-        </Box>
+        <Flex
+          w={"fit-content"}
+          borderRadius={50}
+          p={"2px 18px"}
+          bg={"#0071DC"}
+          _hover={{ cursor: "pointer", bg: "#002D58" }}
+        >
+          <FontAwesomeIcon
+            icon={faHeart}
+            style={{ marginTop: "15px", marginRight: "10px", color: "white" }}
+          />
+          <Box>
+            <Text fontSize={"16px"} color={"#FFFFFF"} fontWeight={350}>
+              Reorder
+            </Text>
+            <Text fontWeight={600} color={"#FFFFFF"} fontSize={"16px"}>
+              My Items
+            </Text>
+          </Box>
         </Flex>
         {/* profile */}
-        <Flex w={"fit-content"} borderRadius={50}  p={'2px 18px'} bg={'#0071DC'} _hover={{cursor:'pointer',bg:'#002D58'}}>
-        <FontAwesomeIcon icon={faUser} style={{marginTop:'15px',marginRight:'10px', color:'white'}} />
-        <Box>
-          <Text fontSize={'16px'} color={'#FFFFFF'} fontWeight={350}>Sign In</Text>
-          <Text fontWeight={600} color={'#FFFFFF'} fontSize={'16px'}>Account</Text>
-        </Box>
+        <Flex
+          w={"fit-content"}
+          borderRadius={50}
+          p={"2px 18px"}
+          bg={"#0071DC"}
+          _hover={{ cursor: "pointer", bg: "#002D58" }}
+        >
+          <FontAwesomeIcon
+            icon={faUser}
+            style={{ marginTop: "15px", marginRight: "10px", color: "white" }}
+          />
+          <Box>
+            <Text fontSize={"16px"} color={"#FFFFFF"} fontWeight={350}>
+              Sign In
+            </Text>
+            <Text fontWeight={600} color={"#FFFFFF"} fontSize={"16px"}>
+              Account
+            </Text>
+          </Box>
         </Flex>
         {/* cart */}
-        <Flex w={"fit-content"} borderRadius={50}  p={'5px 18px'} bg={'#0071DC'} flexDirection={'column'} justifyContent={'center'} alignItems={'center'} _hover={{cursor:'pointer',bg:'#002D58'}}>
-        <FontAwesomeIcon icon={faCartShopping}  style={{marginRight:'6px', color:'white'}}  />
-        <Box>
-          <Text fontSize={'16px'} color={'#FFFFFF'} fontWeight={350}>$0.00</Text>
-        </Box>
+        <Flex
+          w={"fit-content"}
+          borderRadius={50}
+          p={"5px 18px"}
+          bg={"#0071DC"}
+          flexDirection={"column"}
+          justifyContent={"center"}
+          alignItems={"center"}
+          _hover={{ cursor: "pointer", bg: "#002D58" }}
+        >
+          <FontAwesomeIcon
+            icon={faCartShopping}
+            style={{ marginRight: "6px", color: "white" }}
+          />
+          <Box>
+            <Text fontSize={"16px"} color={"#FFFFFF"} fontWeight={350}>
+              $0.00
+            </Text>
+          </Box>
         </Flex>
       </Flex>
       {/* Navbar below */}
+      <Flex justifyContent={"center"} alignItems={"center"} gap={7} p={"3px"} bg={"#F2F8FD"}>
+        <div >
+          {/* Department */}
+          <Menu >
+            <MenuButton
+              as={Button}
+              bg={"none"}
+              _hover={{
+                bg: "none",
+                border: "2px solid #002D58",
+                borderRadius: "50px",
+              }}
+              _active={{
+                bg: "none",
+                border: "2px solid #002D58",
+                borderRadius: "50px",
+              }}
+              rightIcon={<ChevronDownIcon />}
+              marginRight={"10px"}
+            >
+              <FontAwesomeIcon
+                icon={faBorderAll}
+                style={{ marginRight: "10px" }}
+              />{" "}
+              Departments
+            </MenuButton>
+            <MenuList w={"300px"}>
+              <MenuItem fontWeight={"700"} _hover={{ bg: "none" }}>
+                All Departments
+              </MenuItem>
+              <MenuItem
+                bg={bg}
+                color={useColorModeValue("black", "white")}
+                _hover={{ bg: hoverBg, borderLeft: "5px solid #0071DC" }}
+              >
+                Deals
+                <ChevronRightIcon style={{ marginLeft: "auto" }} />{" "}
+              </MenuItem>
+              <MenuItem
+                bg={bg}
+                color={useColorModeValue("black", "white")}
+                _hover={{ bg: hoverBg, borderLeft: "5px solid #0071DC" }}
+              >
+                Fathers Day <ChevronRightIcon style={{ marginLeft: "auto" }} />
+              </MenuItem>
+              <MenuItem
+                bg={bg}
+                color={useColorModeValue("black", "white")}
+                _hover={{ bg: hoverBg, borderLeft: "5px solid #0071DC" }}
+              >
+                Graduation <ChevronRightIcon style={{ marginLeft: "auto" }} />
+              </MenuItem>
+              <MenuItem
+                bg={bg}
+                color={useColorModeValue("black", "white")}
+                _hover={{ bg: hoverBg, borderLeft: "5px solid #0071DC" }}
+              >
+                Summer Shop <ChevronRightIcon style={{ marginLeft: "auto" }} />
+              </MenuItem>
+              <MenuItem
+                bg={bg}
+                color={useColorModeValue("black", "white")}
+                _hover={{ bg: hoverBg, borderLeft: "5px solid #0071DC" }}
+              >
+                Grocery <ChevronRightIcon style={{ marginLeft: "auto" }} />
+              </MenuItem>
+              <MenuItem
+                bg={bg}
+                color={useColorModeValue("black", "white")}
+                _hover={{ bg: hoverBg, borderLeft: "5px solid #0071DC" }}
+              >
+                Home, Garden & Tools{" "}
+                <ChevronRightIcon style={{ marginLeft: "auto" }} />
+              </MenuItem>
+              <MenuItem
+                bg={bg}
+                color={useColorModeValue("black", "white")}
+                _hover={{ bg: hoverBg, borderLeft: "5px solid #0071DC" }}
+              >
+                Baby, Kids, & Toys{" "}
+                <ChevronRightIcon style={{ marginLeft: "auto" }} />
+              </MenuItem>
+              <MenuItem
+                bg={bg}
+                color={useColorModeValue("black", "white")}
+                _hover={{ bg: hoverBg, borderLeft: "5px solid #0071DC" }}
+              >
+                Electronics & Video Games{" "}
+                <ChevronRightIcon style={{ marginLeft: "auto" }} />
+              </MenuItem>
+              <MenuItem
+                bg={bg}
+                color={useColorModeValue("black", "white")}
+                _hover={{ bg: hoverBg, borderLeft: "5px solid #0071DC" }}
+              >
+                Pharmacy, Health & Wellness{" "}
+                <ChevronRightIcon style={{ marginLeft: "auto" }} />
+              </MenuItem>
+              <MenuItem
+                bg={bg}
+                color={useColorModeValue("black", "white")}
+                _hover={{ bg: hoverBg, borderLeft: "5px solid #0071DC" }}
+              >
+                Personal Care{" "}
+                <ChevronRightIcon style={{ marginLeft: "auto" }} />
+              </MenuItem>
+              <MenuItem
+                bg={bg}
+                color={useColorModeValue("black", "white")}
+                _hover={{ bg: hoverBg, borderLeft: "5px solid #0071DC" }}
+              >
+                Beauty <ChevronRightIcon style={{ marginLeft: "auto" }} />
+              </MenuItem>
+              <MenuItem
+                bg={bg}
+                color={useColorModeValue("black", "white")}
+                _hover={{ bg: hoverBg, borderLeft: "5px solid #0071DC" }}
+              >
+                Auto & Tires <ChevronRightIcon style={{ marginLeft: "auto" }} />
+              </MenuItem>
+              <MenuItem
+                bg={bg}
+                color={useColorModeValue("black", "white")}
+                _hover={{ bg: hoverBg, borderLeft: "5px solid #0071DC" }}
+              >
+                Household Essentials{" "}
+                <ChevronRightIcon style={{ marginLeft: "auto" }} />{" "}
+              </MenuItem>
+              <MenuItem
+                bg={bg}
+                color={useColorModeValue("black", "white")}
+                _hover={{ bg: hoverBg, borderLeft: "5px solid #0071DC" }}
+              >
+                Sports & Outdoors{" "}
+                <ChevronRightIcon style={{ marginLeft: "auto" }} />{" "}
+              </MenuItem>
+              <MenuItem
+                bg={bg}
+                color={useColorModeValue("black", "white")}
+                _hover={{ bg: hoverBg, borderLeft: "5px solid #0071DC" }}
+              >
+                Pets <ChevronRightIcon style={{ marginLeft: "auto" }} />
+              </MenuItem>
+              <MenuItem
+                bg={bg}
+                color={useColorModeValue("black", "white")}
+                _hover={{ bg: hoverBg, borderLeft: "5px solid #0071DC" }}
+              >
+                School, Office & Art Supplies{" "}
+                <ChevronRightIcon style={{ marginLeft: "auto" }} />
+              </MenuItem>
+              <MenuItem
+                bg={bg}
+                color={useColorModeValue("black", "white")}
+                _hover={{ bg: hoverBg, borderLeft: "5px solid #0071DC" }}
+              >
+                Movies, Music & Books{" "}
+                <ChevronRightIcon style={{ marginLeft: "auto" }} />
+              </MenuItem>
+              <MenuItem
+                bg={bg}
+                color={useColorModeValue("black", "white")}
+                _hover={{ bg: hoverBg, borderLeft: "5px solid #0071DC" }}
+              >
+                Seasonal Decor & Party Supplies{" "}
+                <ChevronRightIcon style={{ marginLeft: "auto" }} />
+              </MenuItem>
+              <MenuItem
+                bg={bg}
+                color={useColorModeValue("black", "white")}
+                _hover={{ bg: hoverBg, borderLeft: "5px solid #0071DC" }}
+              >
+                Gift Cards <ChevronRightIcon style={{ marginLeft: "auto" }} />
+              </MenuItem>
+              <MenuItem
+                bg={bg}
+                color={useColorModeValue("black", "white")}
+                _hover={{ bg: hoverBg, borderLeft: "5px solid #0071DC" }}
+              >
+                Shop With Purpose{" "}
+                <ChevronRightIcon style={{ marginLeft: "auto" }} />
+              </MenuItem>
+            </MenuList>
+          </Menu>
+          {/* Services */}
+          <Menu >
+            <MenuButton
+              as={Button}
+              bg={"none"}
+              marginRight={"10px"}
+              _hover={{
+                bg: "none",
+                border: "2px solid #002D58",
+                borderRadius: "50px",
+              }}
+              _active={{
+                bg: "none",
+                border: "2px solid #002D58",
+                borderRadius: "50px",
+                
+              }}
+              rightIcon={<ChevronDownIcon />}
+            >
+              <FontAwesomeIcon
+                icon={faBorderAll}
+                style={{ marginRight: "10px" }}
+              />{" "}
+              Services
+            </MenuButton>
+            <MenuList w={"300px"}>
+              <MenuItem fontWeight={"700"} _hover={{ bg: "none" }}>
+                All services
+              </MenuItem>
+              <MenuItem
+                bg={bg}
+                color={useColorModeValue("black", "white")}
+                _hover={{ bg: hoverBg, borderLeft: "5px solid #0071DC" }}
+              >
+                Auto Care Center Services
+                <ChevronRightIcon style={{ marginLeft: "auto" }} />{" "}
+              </MenuItem>
+              <MenuItem
+                bg={bg}
+                color={useColorModeValue("black", "white")}
+                _hover={{ bg: hoverBg, borderLeft: "5px solid #0071DC" }}
+              >
+                Pharmacy <ChevronRightIcon style={{ marginLeft: "auto" }} />
+              </MenuItem>
+              <MenuItem
+                bg={bg}
+                color={useColorModeValue("black", "white")}
+                _hover={{ bg: hoverBg, borderLeft: "5px solid #0071DC" }}
+              >
+                Health & Wellness{" "}
+                <ChevronRightIcon style={{ marginLeft: "auto" }} />
+              </MenuItem>
+              <MenuItem
+                bg={bg}
+                color={useColorModeValue("black", "white")}
+                _hover={{ bg: hoverBg, borderLeft: "5px solid #0071DC" }}
+              >
+                Walmart+ Membership{" "}
+                <ChevronRightIcon style={{ marginLeft: "auto" }} />
+              </MenuItem>
+              <MenuItem
+                bg={bg}
+                color={useColorModeValue("black", "white")}
+                _hover={{ bg: hoverBg, borderLeft: "5px solid #0071DC" }}
+              >
+                Registry, Lists, & Gifts
+                <ChevronRightIcon style={{ marginLeft: "auto" }} />
+              </MenuItem>
+              <MenuItem
+                bg={bg}
+                color={useColorModeValue("black", "white")}
+                _hover={{ bg: hoverBg, borderLeft: "5px solid #0071DC" }}
+              >
+                Custom Cakes <ChevronRightIcon style={{ marginLeft: "auto" }} />
+              </MenuItem>
+              <MenuItem
+                bg={bg}
+                color={useColorModeValue("black", "white")}
+                _hover={{ bg: hoverBg, borderLeft: "5px solid #0071DC" }}
+              >
+                Photo Services{" "}
+                <ChevronRightIcon style={{ marginLeft: "auto" }} />
+              </MenuItem>
+              <MenuItem
+                bg={bg}
+                color={useColorModeValue("black", "white")}
+                _hover={{ bg: hoverBg, borderLeft: "5px solid #0071DC" }}
+              >
+                Financial Services{" "}
+                <ChevronRightIcon style={{ marginLeft: "auto" }} />
+              </MenuItem>
+              <MenuItem
+                bg={bg}
+                color={useColorModeValue("black", "white")}
+                _hover={{ bg: hoverBg, borderLeft: "5px solid #0071DC" }}
+              >
+                Protection, Home, & Tech{" "}
+                <ChevronRightIcon style={{ marginLeft: "auto" }} />
+              </MenuItem>
+              <MenuItem
+                bg={bg}
+                color={useColorModeValue("black", "white")}
+                _hover={{ bg: hoverBg, borderLeft: "5px solid #0071DC" }}
+              >
+                Subscriptions{" "}
+                <ChevronRightIcon style={{ marginLeft: "auto" }} />
+              </MenuItem>
+              <MenuItem
+                bg={bg}
+                color={useColorModeValue("black", "white")}
+                _hover={{ bg: hoverBg, borderLeft: "5px solid #0071DC" }}
+              >
+                Community & Giving{" "}
+                <ChevronRightIcon style={{ marginLeft: "auto" }} />
+              </MenuItem>
+              <MenuItem
+                bg={bg}
+                color={useColorModeValue("black", "white")}
+                _hover={{ bg: hoverBg, borderLeft: "5px solid #0071DC" }}
+              >
+                Ordering Online{" "}
+                <ChevronRightIcon style={{ marginLeft: "auto" }} />
+              </MenuItem>
+            </MenuList>
+          </Menu>    
+          |     
+        </div>
+        {/* Links */}
+        <Text fontWeight={"400"} fontSize={"14px"} color={"#002D58"} width={"fit-content"} _hover={{borderBottom:"1px solid #002D58",cursor:"pointer"}}>Deals</Text>
+        <Text fontWeight={"400"} fontSize={"14px"} color={"#002D58"} width={"fit-content"} _hover={{borderBottom:"1px solid #002D58",cursor:"pointer"}}>Grocery & Essentials</Text>
+        <Text fontWeight={"400"} fontSize={"14px"} color={"#002D58"} width={"fit-content"} _hover={{borderBottom:"1px solid #002D58",cursor:"pointer"}}>Fathers Day</Text>
+        <Text fontWeight={"400"} fontSize={"14px"} color={"#002D58"} width={"fit-content"} _hover={{borderBottom:"1px solid #002D58",cursor:"pointer"}}>Summer Shop</Text>
+        <Text fontWeight={"400"} fontSize={"14px"} color={"#002D58"} width={"fit-content"} _hover={{borderBottom:"1px solid #002D58",cursor:"pointer"}}>Pride Always</Text>
+        <Text fontWeight={"400"} fontSize={"14px"} color={"#002D58"} width={"fit-content"} _hover={{borderBottom:"1px solid #002D58",cursor:"pointer"}}>Fashion</Text>
+        <Text fontWeight={"400"} fontSize={"14px"} color={"#002D58"} width={"fit-content"} _hover={{borderBottom:"1px solid #002D58",cursor:"pointer"}}>Home</Text>
+        <Text fontWeight={"400"} fontSize={"14px"} color={"#002D58"} width={"fit-content"} _hover={{borderBottom:"1px solid #002D58",cursor:"pointer"}}>Eletronics</Text>
+        <Text fontWeight={"400"} fontSize={"14px"} color={"#002D58"} width={"fit-content"} _hover={{borderBottom:"1px solid #002D58",cursor:"pointer"}}>Patio & Garden</Text>
+        <Text fontWeight={"400"} fontSize={"14px"} color={"#002D58"} width={"fit-content"} _hover={{borderBottom:"1px solid #002D58",cursor:"pointer"}}>Registry</Text>
+        <Text fontWeight={"400"} fontSize={"14px"} color={"#002D58"} width={"fit-content"} _hover={{borderBottom:"1px solid #002D58",cursor:"pointer"}}>ONE Debit</Text>
+      </Flex>
     </div>
   );
 }
