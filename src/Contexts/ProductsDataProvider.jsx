@@ -419,6 +419,69 @@ export default function ProductsDataProvider({children}) {
       title:"Nerf Super Soaker Flip Fill Water Blaster, Fast Fill, 30 Fluid Ounce Tank, Water Toys"
     }
   ])
+  //moreBrands
+  let [moreBrands, setMoreBrands] = useState([
+    {
+      id:1,
+      image:"https://i5.walmartimages.com/asr/7a947a45-4760-4c7f-8811-02363cef7727.4530a43ba41d5a342f6fa104ca4f7bde.jpeg?odnHeight=175&odnWidth=175&odnBg=FFFFFF",
+      price:9.89,
+      title:"So Lazo Who You Are Cotton Bucket Hat"
+    },
+    {
+      id:2,
+      image:"https://i5.walmartimages.com/asr/7f172ad3-23fb-464f-bbd1-795da389fbe1.2ae6ec70f5fe85de9e442f791243cd2a.jpeg?odnHeight=175&odnWidth=175&odnBg=FFFFFF",
+      price:12.89,
+      title:"Zaddy Earth I Heart Gay People 14oz Stainless Steel Travel Mug"
+    },
+    {
+      id:3,
+      image:"https://i5.walmartimages.com/asr/b8f00946-73a7-424e-bd3f-ef9ce25c766a.08a534c4231696761578995746aef9d5.jpeg?odnHeight=175&odnWidth=175&odnBg=FFFFFF",
+      price:10.05,
+      title:"Anna Parade Queer Water Bottle, 32 Ounces, Clear"
+    },
+    {
+      id:4,
+      image:"https://i5.walmartimages.com/asr/dc2a7ec5-527c-41b0-80a0-05c4b6e20d1b.585cebf086b294b7cb6f63ae742ec33d.jpeg?odnHeight=175&odnWidth=175&odnBg=FFFFFF",
+      price:14.98,
+      title:"So Lazo Amazing Multi-Color Throw Blanket, 50 * 60"
+    },
+    {
+      id:5,
+      image:"https://i5.walmartimages.com/asr/652abcc7-bfff-4591-9397-d57cb45bb7c6.efd4bb42a80bce494abb59b384038a9f.jpeg?odnHeight=175&odnWidth=175&odnBg=FFFFFF",
+      price:10.98,
+      title:"Zaddy Earth Gay Agenda Planner"
+    },
+    {
+      id:6,
+      image:"https://i5.walmartimages.com/asr/cf270cf0-68f5-481a-9990-e52dae9a38f4.f9b0d51fc7bc15ec238c16eaa5f838b5.jpeg?odnHeight=175&odnWidth=175&odnBg=FFFFFF",
+      price:8.75,
+      title:"Ink Meets Paper Pride Stationery Pack"
+    },
+    {
+      id:7,
+      image:"https://i5.walmartimages.com/asr/824c3956-76f0-426a-94de-a63039bee605.8e152ed4f3cfe4ec863da281af7278a5.jpeg?odnHeight=175&odnWidth=175&odnBg=FFFFFF",
+      price:14.26,
+      title:"So Lazo Queer & Magical Printed Canvas Tote Bag"
+    },
+    {
+      id:8,
+      image:"https://i5.walmartimages.com/asr/4d6349df-72a7-480a-9b1e-8fda5a29a72d.728fff0bab30b9f440dfa2dfa18b29c8.jpeg?odnHeight=175&odnWidth=175&odnBg=FFFFFF",
+      price:2.98,
+      title:"So Lazo Assorted Pins"
+    },
+    {
+      id:9,
+      image:"https://i5.walmartimages.com/asr/19c7475c-0c60-4fbf-9460-53a0f11f2f35.c52665889bfce45d79b2f7fdb547526c.jpeg?odnHeight=175&odnWidth=175&odnBg=FFFFFF",
+      price:7.89,
+      title:"Bianca's Design Blue Mountain 22oz Enameled Metal Camper Mug"
+    },
+    {
+      id:10,
+      image:"https://i5.walmartimages.com/asr/501b5485-f979-42bf-b6dc-9acb37f0dcfc.4a568b8a4fdd72ebc155d2c8e96a3614.jpeg?odnHeight=175&odnWidth=175&odnBg=FFFFFF",
+      price:9.99,
+      title:"Bianca's Designs Future Is Inclusive Crew Socks, 1 Pair, Black, One Size Fits Most, Unisex"
+    }
+  ])
 
   let dataValues ={
     flashDeals,
@@ -428,6 +491,7 @@ export default function ProductsDataProvider({children}) {
     socialMedia,
     categories,
     entertainment,
+    moreBrands,
   };
   return (
     <ProductsData.Provider value={dataValues}>
