@@ -48,34 +48,34 @@ export default function Trending() {
           touchStartPreventDefault={false}
         >
           <SwiperSlide>
-            <Image src="/src/assets/trending/img1.png" alt="image1" borderRadius={"10px"}  />
+            <Image src="/public/trending/img1.png" alt="image1" borderRadius={"10px"}  />
           </SwiperSlide>
           <SwiperSlide>
-            <Image src="/src/assets/trending/img2.png" alt="image1" borderRadius={"10px"} />
+            <Image src="/public/trending/img2.png" alt="image1" borderRadius={"10px"} />
           </SwiperSlide>
           <SwiperSlide>
-            <Image src="/src/assets/trending/img3.png" alt="image1" borderRadius={"10px"} />
+            <Image src="/public/trending/img3.png" alt="image1" borderRadius={"10px"} />
           </SwiperSlide>
           <SwiperSlide>
-            <Image src="/src/assets/trending/img4.png" alt="image1" borderRadius={"10px"} />
+            <Image src="/public/trending/img4.png" alt="image1" borderRadius={"10px"} />
           </SwiperSlide>
           <SwiperSlide>
-            <Image src="/src/assets/trending/img5.png" alt="image1" borderRadius={"10px"} />
+            <Image src="/public/trending/img5.png" alt="image1" borderRadius={"10px"} />
           </SwiperSlide>
           <SwiperSlide>
-            <Image src="/src/assets/trending/img6.png" alt="image1"  borderRadius={"10px"}/>
+            <Image src="/public/trending/img6.png" alt="image1"  borderRadius={"10px"}/>
           </SwiperSlide>
           <SwiperSlide>
-            <Image src="/src/assets/trending/img7.png" alt="image1"  borderRadius={"10px"}/>
+            <Image src="/public/trending/img7.png" alt="image1"  borderRadius={"10px"}/>
           </SwiperSlide>
           <SwiperSlide>
-            <Image src="/src/assets/trending/img8.png" alt="image1" borderRadius={"10px"} />
+            <Image src="/public/trending/img8.png" alt="image1" borderRadius={"10px"} />
           </SwiperSlide>
           <SwiperSlide>
-            <Image src="/src/assets/trending/img9.png" alt="image1"  borderRadius={"10px"}/>
+            <Image src="/public/trending/img9.png" alt="image1"  borderRadius={"10px"}/>
           </SwiperSlide>
           <SwiperSlide>
-            <Image src="/src/assets/trending/img10.png" alt="image1"  borderRadius={"10px"}/>
+            <Image src="/public/trending/img10.png" alt="image1"  borderRadius={"10px"}/>
           </SwiperSlide>
         </Swiper>
       </Flex>

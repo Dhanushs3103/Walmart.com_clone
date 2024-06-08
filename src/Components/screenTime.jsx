@@ -75,7 +75,7 @@ export default function ScreenTime() {
           </Swiper>
         </Flex>
       </Box>
-      <Image src='/src/assets/screen/screenTIme.png' alt="screen" style={{width:"650px", height:"421px", marginTop:"10px", borderRadius:"10px",}} _hover={{cursor:"pointer"}}/>
+      <Image src='/public/screen/screenTIme.png' alt="screen" style={{width:"650px", height:"421px", marginTop:"10px", borderRadius:"10px",}} _hover={{cursor:"pointer"}}/>
     </Box>
   );
 }
