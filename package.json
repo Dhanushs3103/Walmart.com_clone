@@ -23,7 +23,10 @@
     "framer-motion": "^11.2.6",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-router-dom": "^6.23.1"
+    "react-player": "^2.16.0",
+    "react-router-dom": "^6.23.1",
+    "styled-components": "^6.1.11",
+    "swiper": "^11.1.4"
   },
   "devDependencies": {
     "@types/react": "^18.2.66",

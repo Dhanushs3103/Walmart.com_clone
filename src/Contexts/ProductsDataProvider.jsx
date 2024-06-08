@@ -2,7 +2,7 @@ import React from 'react'
 import { createContext } from 'react'
 import { useState } from 'react';
 
-let ProductsData = createContext();
+export let ProductsData = createContext();
 
 export default function ProductsDataProvider({children}) {
   //flash deals data,

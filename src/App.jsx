@@ -6,29 +6,57 @@ import { Container } from "@chakra-ui/react";
 import "./App.css";
 import Navbar from "./Components/Navbar.jsx"; // importing the Navbar
 import Banner from "./Components/Banner.jsx";
+import FlashDeals from "./Components/FlashDeals.jsx";
+import ScreenTime from "./Components/screenTime.jsx";
+import Gateway from "./Components/Gateway.jsx" ;
+import GatewayCards from "./Components/GatewayCards.jsx"
+import CapParty from "./Components/CapParty.jsx";
+import SocialMedia from "./Components/SocialMedia.jsx";
+import Category from "./Components/Category.jsx";
+import Entertainment from "./Components/Entertainment.jsx";
+import EntertainmentCards from "./Components/EntertainmentCard.jsx";
+import Trending from "./Components/Trending.jsx";
+import MoreBrands from "./Components/MoreBrands.jsx";
+import MoreBrandsCards from "./Components/MoreBrandsCards.jsx";
+import Footer from "./Components/Footer.jsx"
 
 function App() {
   return (
     <div style={{ position: "relative" }}>
       <Navbar />
+      {/* container */}
       <Container  maxW={"8xl"}   style={{ marginTop: "140px",marginBottom:"20px" }}>
+        {/* Banner component */}
         <Banner />
+        {/* FlashDeals component */}
+        <FlashDeals/>
+        {/* ScreenTime component */}
+        <ScreenTime/>
+        {/* Gateway component */}
+        <Gateway/>
+        {/* GatewayCards component */}
+        <GatewayCards/>
+        {/* CapParty component */}
+        <CapParty/>
+        {/* SocialMedia component */}
+        <SocialMedia/>
+        {/* Category component */}
+        <Category/>
+        {/* Entertainment Component */}
+        <Entertainment/>
+        {/* EntertainmentCards Component */}
+        <EntertainmentCards/>
+        {/* Trending Component */}
+        <Trending/>
+        {/* moreBrand Component */}
+        <MoreBrands/>
+        {/* moreBrandCards Component */}
+        <MoreBrandsCards/>
       </Container>
+      {/* footer */}
+      <Footer/>
     </div>
   );
 }
-
-// <Box border={"1px solid black"} p={"10px"} bg={"red"} >
-//   {/* <Image src={"../assets/image1.png"} alt=""/>
-//   <Image src={"../assets/image2.png"} alt=""/>
-//   <Image src={"../assets/image3.png"} alt=""/>
-//   <Image src={"../assets/image4.png"} alt=""/>
-//   <Image src={"../assets/image5.png"} alt=""/>
-//   <Image src={"../assets/image6.png"} alt=""/>
-//   <Image src={"../assets/image7.png"} alt=""/>
-//   <Image src={"../assets/image8.png"} alt=""/>
-//   <Image src={"../assets/image9.png"} alt=""/>
-//   <Image src={"../assets/image10.png"} alt=""/> */}
-// </Box>
 
 export default App;

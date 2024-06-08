@@ -21,6 +21,7 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHeart, faUser } from "@fortawesome/free-regular-svg-icons";
 import { faCartShopping, faBorderAll } from "@fortawesome/free-solid-svg-icons";
+
 //local imports
 import "../App.css";
 
@@ -34,17 +35,18 @@ export default function Navbar() {
         justifyContent={"center"}
         alignItems={"center"}
         bg={"#0071DC"}
-        gap={6}
-        p={"15px"}
+        gap={3}
+        p={"10px"}
       >
         {/* Navbar */}
         <Box id="LogoImage" width={"fit-content"}>
           <a href="">
             <Image
-              w={"40px"}
-              h={"40px"}
-              src="https://bit.ly/dan-abramov"
+              w={"60px"}
+              h={"60px"}
+              src="https://info.growthinstitute.com/hubfs/walmart-square.jpg"
               borderRadius={"50px"}
+              _hover={{ cursor: "pointer" }}
             />
           </a>
         </Box>
@@ -246,7 +248,7 @@ export default function Navbar() {
           </MenuList>
         </Menu>
         {/* serach bar */}
-        <Flex borderRadius={50} w={"35%"} gap={3} p={2} bg={"#FFFFFF"}>
+        <Flex borderRadius={50} w={"42%"} gap={3} p={2} bg={"#FFFFFF"}>
           <Input
             border={"none"}
             _focus={{
